@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: rgb(255, 255, 255);
+        line-height: 1.9rem;
+        /* font-size: 1.3rem; */
+        font-family: "Montserrat", sans-serif;
+      }
+  
+  
+      .box {
+        background-color: white;
+        margin-bottom: 8%;
+        padding: 9%;
+        height: 91%;
+        box-shadow: 0;
+        transition-property: box-shadow;
+        transition-duration: 0.7s;
+      }
+  
+  
+  
+      .box-lg {
+        background-color: white;
+        margin-bottom: 8%;
+        padding: 4%;
+        height: 91%;
+        box-shadow: 0;
+        transition-property: box-shadow;
+        transition-duration: 0.7s;
+      }
+  
+    
+  
+      .button {
+        text-align: center;
+      }
+  
+      
+  
+      /* additional related to login*/
+  
+      .boxa {
+        width: 500px;
+        /* margin: 100px auto; */
+  
+        position: fixed;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%, -80%);
+  
+        padding: 3% 4%;
+        background-color: rgb(223, 218, 218);
+        border-radius: 15px;
+        box-shadow: 15px 16px 14px -2px rgba(0, 0, 0, 0.71);
+        z-index: 12;
+      }
+  
+      .boxa-regi {
+        position: fixed;
+        top: 75%;
+        left: 50%;
+      }
+  
+    
+      .fa{
+        float: right;
+      }
+
+      h2{
+        text-align: center;
+        font-size: 2.5rem;
+        font-family: "Montserrat", sans-serif;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+     <!-- integreted font from google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script
+      src="https://kit.fontawesome.com/ce39fda112.js"
+      crossorigin="anonymous"
+    ></script>
+
+    
+  </head>
+  <body>
+    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle"><h1>Attribute Information</h1></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <ol type="1">
+            
+            <li>Age: age of the patient [years]</li>
+            <li>Sex: sex of the patient [M: Male, F: Female]</li>
+            <li>ChestPainType: chest pain type [TA: Typical Angina, ATA: Atypical Angina, NAP: Non-Anginal Pain, ASY: Asymptomatic]            </li>
+            <li>RestingBP: resting blood pressure [mm Hg]</li>
+            <li>Cholesterol: serum cholesterol [mm/dl]</li>
+            <li>FastingBS: fasting blood sugar [1: if FastingBS > 120 mg/dl, 0: otherwise]</li>
+            <li>RestingECG: resting electrocardiogram results [Normal: Normal, ST: having ST-T wave abnormality (T wave inversions and/or ST elevation or depression of > 0.05 mV), LVH: showing probable or definite left ventricular hypertrophy by Estes' criteria]            </li>
+            <li>MaxHR: maximum heart rate achieved [Numeric value between 60 and 202]</li>
+            <li>ExerciseAngina: exercise-induced angina [Y: Yes, N: No]</li>
+            <li>Oldpeak: oldpeak = ST [Numeric value measured in depression]</li>
+            <li>ST_Slope: the slope of the peak exercise ST segment [Up: upsloping, Flat: flat, Down: downsloping]</li>
+            
+          </ol>
+
+
+
+
+
+
+
+
+</div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="boxa boxa-regi ">
+      
+      
+      
+      <!-- Button trigger modal -->
+
+
+<!-- Modal -->
+
+
+      <form action="{{url_for('home')}}" method="post">
+        <div class="login-form">
+          <div class="login">
+            <h2>Heart Failure Prediction</h2>
+          </div>
+          <div class="login">
+            <h2>Fill Detail  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+              <i class="fa fa-question-circle" style="font-size:24px"></i>
+            </button></h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Age</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Age"
+                  name="age"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Gender</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="radio"
+                  name="gender"
+                  value="1"
+                />Male
+                <input
+                  class="form-control"
+                  type="radio"
+                  name="gender"
+                  value="0"
+                />Female
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">CP_type</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <select class="form-control" name="CP_type">
+                  <option value="ATA">ATA</option>
+                  <option value="NAP">NAP</option>
+                  <option value="ASY">ASY</option>
+                  <option value="TA">TA</option>
+                </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Resting_BP:</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input class="form-control" type="text" name="bp" placeholder="resting bp" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Cholestoral</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input class="form-control" type="text" name="cholestoral" placeholder="cholesterol" />
+              </div>
+            </div>
+          </div>
+
+          
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Fasting BS:&nbsp; &nbsp&nbsp&nbsp &nbsp;</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input type="radio" class="form-control" name="fasting" value="1" />Yes
+          <input type="radio" class="form-control" name="fasting" value="0" />No&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4"> ECG:</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <select class='form-control' name="ecg">
+                  <option value="Normal">Normal</option>
+                  <option value="ST">ST</option>
+                  <option value="LVH">LVH</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Max_HR:</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input type="text" class="form-control" name="max_hr" placeholder="max_hr" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Exercise:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input type="radio" class="form-control" name="exercise" value="1" />Yes
+      <input  class="form-control" type="radio" name="exercise" value="0" />No
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">Old Peak:</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <input  class="form-control" type="text" name="old_peak" placeholder="old_peak" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4">ST_SLOPE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-lg-8 col-md-8 col-sm-8">
+              <div class="input-group mb-3">
+                <select class="form-control" name="slope">
+                  <option value="Up">Up</option>
+                  <option value="Flat">FLAT</option>
+                  <option value="Down">DOWN</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <br><br>
+        
+
+        
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <div class="button">
+            <button type="submit" class="btn btn-primary btn-lg btn-p">
+              Predict
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  </body>
+
+</html>

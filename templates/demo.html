@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+
+    <style>
+        body {
+          background-color: rgb(255, 255, 255);
+          line-height: 1.9rem;
+          /* font-size: 1.3rem; */
+          font-family: "Montserrat", sans-serif;
+        }
+    
+    
+        .box {
+          background-color: white;
+          margin-bottom: 8%;
+          padding: 9%;
+          height: 91%;
+          box-shadow: 0;
+          transition-property: box-shadow;
+          transition-duration: 0.7s;
+        }
+    
+    
+    
+        .box-lg {
+          background-color: white;
+          margin-bottom: 8%;
+          padding: 4%;
+          height: 91%;
+          box-shadow: 0;
+          transition-property: box-shadow;
+          transition-duration: 0.7s;
+        }
+    
+      
+    
+        .button {
+          text-align: center;
+        }
+    
+        
+    
+        /* additional related to login*/
+    
+        .boxa {
+          width: 500px;
+          /* margin: 100px auto; */
+    
+          position: fixed;
+          top: 60%;
+          left: 50%;
+          transform: translate(-50%, -80%);
+    
+          padding: 3% 4%;
+          background-color: rgb(223, 218, 218);
+          border-radius: 15px;
+          box-shadow: 15px 16px 14px -2px rgba(0, 0, 0, 0.71);
+          z-index: 12;
+        }
+    
+        .boxa-regi {
+          position: fixed;
+          top: 75%;
+          left: 50%;
+        }
+    
+      
+        .fa{
+          float: right;
+        }
+      </style>
+
+  </head>
+  <body>
+    <!-- Button trigger modal -->
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="exampleModalLong"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLongTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius at ad
+            accusantium tenetur, eaque obcaecati asperiores aliquam illo quod
+            provident sunt minima corporis temporibus nostrum mollitia. Fugiat,
+            repellat quaerat. Nisi aliquam molestiae rerum ea. Architecto,
+            dignissimos nulla! Eum ex illo magni! Vero quia sint, consequuntur
+            laboriosam neque voluptatum animi cupiditate numquam mollitia quos
+            omnis, id provident ipsam voluptate dolore amet. Vitae nam
+            aspernatur totam quisquam rem aliquid recusandae dolore magni
+            veniam. Ex, quo nemo consequatur at voluptas rem beatae vel rerum
+            error quaerat nihil culpa nulla repellat quidem, magni quae veniam
+            voluptatem eos deserunt? Quos perspiciatis vitae laudantium maiores
+            asperiores, voluptatem repellat at natus tempora ut! Sint sequi hic
+            pariatur dicta? Dicta minima enim delectus perferendis aliquam
+            repellendus sapiente tenetur culpa saepe consectetur sint quos ipsa
+            rem earum hic, accusamus fugiat architecto dolorem eaque optio odit
+            porro explicabo! Nesciunt voluptatum vero qui? Cupiditate quasi
+            earum veniam at exercitationem error eius possimus, minima incidunt
+            vel? Adipisci esse, iusto nostrum blanditiis cum pariatur repellat
+            impedit sit corporis, est omnis laboriosam eos? Explicabo impedit
+            magnam ab, architecto ex repellat facere, iure aut neque alias
+            dolore. Quia quod illo provident obcaecati blanditiis dolorum
+            officiis. Maiores, accusamus enim repudiandae cupiditate sint
+            excepturi quas ex eligendi!
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="boxa boxa-regi  modal1">
+      
+      
+      
+        <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+    <i class="fa fa-question-circle" style="font-size:24px"></i>
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid qui corporis voluptates harum recusandae pariatur ullam officiis autem deserunt soluta? Veritatis possimus distinctio eaque laudantium explicabo. Et, tempore reprehenderit. Accusamus veritatis in nulla eum porro aut facere, tempora consequuntur obcaecati, laboriosam dolores molestiae quam maiores voluptas sint. Doloribus hic dolore repellendus animi. Facere ratione quibusdam laudantium eligendi. Deserunt, magni earum! Vero dicta rem, natus ipsam blanditiis, inventore earum, a minima possimus sequi dolor perferendis aliquid consectetur architecto soluta et. Rem architecto nesciunt quis suscipit cupiditate atque repellendus odio iste, corporis modi, est, molestiae pariatur at! Alias fugiat aliquid facilis dolore.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+        <form action="{{url_for('home')}}" method="post">
+          <div class="login-form">
+            <div class="login">
+              <h2>Fill Detail</h2>
+            </div>
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Age</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Age"
+                    name="age"
+                  />
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Gender</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input
+                    class="form-control"
+                    type="radio"
+                    name="gender"
+                    value="1"
+                  />Male
+                  <input
+                    class="form-control"
+                    type="radio"
+                    name="gender"
+                    value="0"
+                  />Female
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">CP_type</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <select class="form-control" name="CP_type">
+                    <option value="ATA">ATA</option>
+                    <option value="NAP">NAP</option>
+                    <option value="ASY">ASY</option>
+                    <option value="TA">TA</option>
+                  </select>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Resting_BP:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input class="form-control" type="text" name="bp" placeholder="resting bp" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Cholestoral</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input class="form-control" type="text" name="cholestoral" placeholder="cholesterol" />
+                </div>
+              </div>
+            </div>
+  
+            
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Fasting BS:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input type="radio" class="form-control" name="fasting" value="1" />Yes
+            <input type="radio" class="form-control" name="fasting" value="0" />No
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">ECG:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <select class='form-control' name="ecg">
+                    <option value="Normal">Normal</option>
+                    <option value="ST">ST</option>
+                    <option value="LVH">LVH</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Max_HR:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input type="text" class="form-control" name="max_hr" placeholder="max_hr" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Exercise:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input type="radio" class="form-control" name="exercise" value="1" />Yes
+        <input  class="form-control" type="radio" name="exercise" value="0" />No
+                </div>
+              </div>
+            </div>
+  
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">Old Peak:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <input  class="form-control" type="text" name="old_peak" placeholder="old_peak" />
+                </div>
+              </div>
+            </div>
+  
+            <div class="row">
+              <div class="col-lg-4 col-md-4 col-sm-4">ST_SLOPE:</div>
+              <div class="col-lg-8 col-md-8 col-sm-8">
+                <div class="input-group mb-3">
+                  <select class="form-control" name="slope">
+                    <option value="Up">Up</option>
+                    <option value="Flat">FLAT</option>
+                    <option value="Down">DOWN</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+  
+          
+  
+          
+  
+            <div class="button">
+              <button type="submit" class="btn btn-primary btn-lg btn-p">
+                Predict
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

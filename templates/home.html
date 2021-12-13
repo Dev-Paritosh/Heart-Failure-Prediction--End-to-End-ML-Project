@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <form action="{{url_for('home')}}" method="post">
+      <input type="text" name="age" placeholder="age" />
+      <br />
+      <input type="radio" name="gender" value="1" />Male
+      <input type="radio" name="gender" value="0" />Female
+      <br />
+      <select name="CP_type">
+        <option value="ATA">ATA</option>
+        <option value="NAP">NAP</option>
+        <option value="ASY">ASY</option>
+        <option value="TA">TA</option>
+      </select>
+      <br />
+      <input type="text" name="bp" placeholder="resting bp" />
+      <br />
+      <input type="text" name="cholestoral" placeholder="cholesterol" />
+      <br />
+      Fasting BS
+      <input type="radio" name="fasting" value="1" />Yes
+      <input type="radio" name="fasting" value="0" />No
+      <br />
+      <select name="ecg">
+        <option value="Normal">Normal</option>
+        <option value="ST">ST</option>
+        <option value="LVH">LVH</option>
+      </select>
+      <br />
+      <input type="text" name="max_hr" placeholder="max_hr" />
+      <br />
+      Exercise
+      <input type="radio" name="exercise" value="1" />Yes
+      <input type="radio" name="exercise" value="0" />No
+      <br />
+      <input type="text" name="old_peak" placeholder="old_peak" />
+      <br />
+      ST_SLOPE
+      <select name="slope">
+        <option value="Up">Up</option>
+        <option value="Flat">FLAT</option>
+        <option value="Down">DOWN</option>
+      </select>
+      <br />
+      <input type="submit" value="predict!" />
+      <br />
+    </form>
+  </body>
+</html>
